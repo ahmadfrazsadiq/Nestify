@@ -5,18 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Order – Nestify</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             primary: {
-              50: '#f0fdfa',
-              100: '#ccfbf1',
-              500: '#14b8a6',
-              600: '#0d9488',
-              700: '#0f766e',
-              800: '#115e59',
+              50: '#f0fdfa', 100: '#ccfbf1', 500: '#14b8a6',
+              600: '#0d9488', 700: '#0f766e', 800: '#115e59',
             }
           }
         }
@@ -26,12 +23,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body { font-family: 'Inter', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-sm sticky top-0 z-50">
+  <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
         <img src="logo.png" alt="Nestify Logo" class="w-12 h-12 object-contain">
@@ -45,46 +43,49 @@
       </div>
       <a href="https://wa.me/923249453008?text=Assalamualaikum%2C%20I%20want%20to%20order%20from%20Nestify" 
          target="_blank"
-         class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2 transition">
+         class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition shadow-sm">
         Order Now
       </a>
     </div>
   </nav>
 
-  <!-- How to Order Content -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">How to Order</h1>
-      <p class="text-gray-600">Simple 4 steps – no complicated process</p>
+  <!-- Header -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3" data-aos="fade-up">How to Order</h1>
+      <p class="text-primary-100" data-aos="fade-up" data-aos-delay="100">Simple 4 steps – no complicated process</p>
     </div>
+  </section>
 
+  <!-- Steps -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+      <div class="bg-white p-6 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="0">
         <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">1</div>
         <h3 class="font-semibold mb-2">Browse & Choose</h3>
         <p class="text-sm text-gray-500">Select the product you like from the Products page or our social media.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+      <div class="bg-white p-6 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="100">
         <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">2</div>
         <h3 class="font-semibold mb-2">Message on WhatsApp</h3>
         <p class="text-sm text-gray-500">Click the Order button or message us directly. Tell us the product name.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+      <div class="bg-white p-6 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="200">
         <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">3</div>
         <h3 class="font-semibold mb-2">Confirm Details</h3>
         <p class="text-sm text-gray-500">Share your full name, complete address and phone number. We will confirm.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-sm text-center">
+      <div class="bg-white p-6 rounded-2xl shadow-sm text-center" data-aos="fade-up" data-aos-delay="300">
         <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">4</div>
         <h3 class="font-semibold mb-2">Receive & Pay</h3>
         <p class="text-sm text-gray-500">Cash on Delivery. Check the product when it arrives and pay the rider.</p>
       </div>
     </div>
 
-    <div class="mt-12 text-center">
+    <div class="mt-12 text-center" data-aos="fade-up">
       <a href="https://wa.me/923249453008?text=Assalamualaikum%2C%20I%20want%20to%20place%20an%20order" 
          target="_blank"
-         class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-full transition">
+         class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3 rounded-full transition shadow-md">
         Start Ordering on WhatsApp
       </a>
     </div>
@@ -124,5 +125,9 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+  </script>
 </body>
 </html>
