@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products – Nestify</title>
+  <meta name="description" content="Browse quality toys and home essentials at Nestify. Order on WhatsApp with Cash on Delivery across Pakistan.">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <script>
     tailwind.config = {
       theme: {
@@ -23,15 +30,17 @@
       }
     }
   </script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body { font-family: 'Inter', system-ui, sans-serif; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-sm sticky top-0 z-50">
+  <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2">
         <img src="logo.png" alt="Nestify Logo" class="w-12 h-12 object-contain">
@@ -45,23 +54,28 @@
       </div>
       <a href="https://wa.me/923249453008?text=Assalamualaikum%2C%20I%20want%20to%20order%20from%20Nestify" 
          target="_blank"
-         class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2 transition">
+         class="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded-full flex items-center gap-2 transition shadow-sm">
         Order Now
       </a>
     </div>
   </nav>
 
-  <!-- Products Section -->
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Products</h1>
-      <p class="text-gray-600 max-w-xl mx-auto">Hand-picked items that Pakistani families actually need. Prices updated regularly.</p>
+  <!-- Page Header -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3" data-aos="fade-up">Our Products</h1>
+      <p class="text-primary-100 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Hand-picked items that Pakistani families actually need. Prices updated regularly.
+      </p>
     </div>
+  </section>
 
+  <!-- Products Grid -->
+  <section class="max-w-6xl mx-auto px-4 py-16">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
       <!-- Product 1 -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition">
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition" data-aos="fade-up" data-aos-delay="0">
         <div class="h-52 bg-gray-100 flex items-center justify-center">
           <span class="text-gray-400 text-sm">Product Photo</span>
         </div>
@@ -83,7 +97,7 @@
       </div>
 
       <!-- Product 2 -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition">
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
         <div class="h-52 bg-gray-100 flex items-center justify-center">
           <span class="text-gray-400 text-sm">Product Photo</span>
         </div>
@@ -105,7 +119,7 @@
       </div>
 
       <!-- Product 3 -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition">
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
         <div class="h-52 bg-gray-100 flex items-center justify-center">
           <span class="text-gray-400 text-sm">Product Photo</span>
         </div>
@@ -128,8 +142,8 @@
 
     </div>
 
-    <p class="text-center text-sm text-gray-500 mt-10">
-      More products added regularly. Message us on WhatsApp for latest stock & prices.
+    <p class="text-center text-sm text-gray-500 mt-12" data-aos="fade-up">
+      More products will be added regularly. Message us on WhatsApp for latest stock & prices.
     </p>
   </section>
 
@@ -166,6 +180,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 80
+    });
+  </script>
 
 </body>
 </html>
